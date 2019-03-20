@@ -25,10 +25,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qy0-Pc-2aX" userLabel="popupKnob">
-                            <rect key="frame" x="0.0" y="55" width="50" height="50"/>
+                            <rect key="frame" x="2" y="59" width="46" height="46"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYo-98-BeK">
-                                    <rect key="frame" x="19" y="13" width="12" height="24.5"/>
+                                    <rect key="frame" x="17" y="8.5" width="12" height="29"/>
                                     <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="21"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -36,15 +36,23 @@
                             </subviews>
                             <color key="backgroundColor" red="0.93510329719999996" green="0.61412191390000004" blue="0.46271049980000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="50" id="NNT-36-nFM"/>
+                                <constraint firstAttribute="width" constant="46" id="NNT-36-nFM"/>
                                 <constraint firstItem="eYo-98-BeK" firstAttribute="centerY" secondItem="Qy0-Pc-2aX" secondAttribute="centerY" id="nDK-XE-zYT"/>
                                 <constraint firstItem="eYo-98-BeK" firstAttribute="centerX" secondItem="Qy0-Pc-2aX" secondAttribute="centerX" id="njz-w1-SFp"/>
-                                <constraint firstAttribute="height" constant="50" id="rQA-5j-v6L"/>
+                                <constraint firstAttribute="height" constant="46" id="rQA-5j-v6L"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0H-e6-31p">
                             <rect key="frame" x="0.0" y="55" width="375" height="50"/>
                             <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pp5-uF-78r">
+                                    <rect key="frame" x="2" y="2" width="46" height="46"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="46" id="gGQ-CO-Ccp"/>
+                                        <constraint firstAttribute="width" constant="46" id="jHn-V5-CeL"/>
+                                    </constraints>
+                                </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="u07-b7-Kfb">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 </stackView>
@@ -53,21 +61,27 @@
                             <constraints>
                                 <constraint firstItem="u07-b7-Kfb" firstAttribute="leading" secondItem="G0H-e6-31p" secondAttribute="leading" id="8Rs-JV-0Ct"/>
                                 <constraint firstItem="u07-b7-Kfb" firstAttribute="top" secondItem="G0H-e6-31p" secondAttribute="top" id="KSq-ft-GS8"/>
+                                <constraint firstAttribute="bottom" secondItem="Pp5-uF-78r" secondAttribute="bottom" constant="2" id="UH3-8I-g6P"/>
                                 <constraint firstAttribute="bottom" secondItem="u07-b7-Kfb" secondAttribute="bottom" id="iPt-Cc-zNG"/>
+                                <constraint firstItem="Pp5-uF-78r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G0H-e6-31p" secondAttribute="leading" constant="2" id="iyh-7p-is7"/>
                                 <constraint firstAttribute="height" constant="50" id="kEZ-hx-dqc"/>
                                 <constraint firstAttribute="trailing" secondItem="u07-b7-Kfb" secondAttribute="trailing" id="ln3-ee-gri"/>
+                                <constraint firstItem="Pp5-uF-78r" firstAttribute="leading" secondItem="G0H-e6-31p" secondAttribute="leading" priority="999" id="nLu-dp-bvX"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pp5-uF-78r" secondAttribute="trailing" constant="2" id="z5E-03-rbO"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Qy0-Pc-2aX" firstAttribute="bottom" secondItem="G0H-e6-31p" secondAttribute="bottom" priority="999" id="6GS-o5-ULj"/>
-                        <constraint firstItem="Qy0-Pc-2aX" firstAttribute="leading" secondItem="G0H-e6-31p" secondAttribute="leading" id="Glz-lT-q16"/>
+                        <constraint firstItem="Qy0-Pc-2aX" firstAttribute="leading" secondItem="G0H-e6-31p" secondAttribute="leading" priority="999" id="Glz-lT-q16"/>
                         <constraint firstItem="G0H-e6-31p" firstAttribute="leading" secondItem="Ydr-A2-LyH" secondAttribute="leading" id="H6e-cH-o9y"/>
                         <constraint firstItem="G0H-e6-31p" firstAttribute="centerX" secondItem="Ydr-A2-LyH" secondAttribute="centerX" id="Lqw-4U-kJh"/>
+                        <constraint firstItem="Qy0-Pc-2aX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ydr-A2-LyH" secondAttribute="leading" constant="2" id="Luo-8I-fCL"/>
                         <constraint firstItem="Qy0-Pc-2aX" firstAttribute="bottom" secondItem="G0H-e6-31p" secondAttribute="bottom" priority="500" constant="-47" id="QXG-Ss-CC1"/>
                         <constraint firstAttribute="bottom" secondItem="G0H-e6-31p" secondAttribute="bottom" constant="5" id="oL3-tn-8nI"/>
                         <constraint firstAttribute="trailing" secondItem="G0H-e6-31p" secondAttribute="trailing" id="vbr-dp-h9p"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qy0-Pc-2aX" secondAttribute="trailing" constant="2" id="wjL-j2-1fZ"/>
                     </constraints>
                 </view>
             </subviews>
@@ -81,10 +95,13 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
+                <outlet property="knob" destination="Pp5-uF-78r" id="LHH-mL-UKZ"/>
+                <outlet property="knobXConstraint" destination="nLu-dp-bvX" id="q1e-6S-baU"/>
                 <outlet property="popupKnob" destination="Qy0-Pc-2aX" id="M75-AS-ixx"/>
                 <outlet property="popupKnobInactiveYConstraint" destination="6GS-o5-ULj" id="JjP-Jo-WrR"/>
+                <outlet property="popupKnobXConstraint" destination="Glz-lT-q16" id="Otj-Hq-4Pm"/>
                 <outlet property="popupLabel" destination="eYo-98-BeK" id="Opb-SG-aEj"/>
-                <outlet property="sliderContainerView" destination="G0H-e6-31p" id="pF4-0l-QuO"/>
+                <outlet property="sliderContainerView" destination="G0H-e6-31p" id="H41-kJ-i1a"/>
                 <outlet property="sliderStackView" destination="u07-b7-Kfb" id="30H-5h-xqV"/>
             </connections>
         </view>

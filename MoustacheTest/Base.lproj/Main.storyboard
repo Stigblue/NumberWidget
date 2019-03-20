@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,65 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoustacheTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nj0-uf-Vfn" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Med-gk-tYA" userLabel="gradientView" customClass="GradientView" customModule="MoustacheTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXT-xw-Znb" customClass="SliderView" customModule="MoustacheTest" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="258.5" width="343" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="IFE-ZT-pxP"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdW-zC-mFC">
+                                                <rect key="frame" x="187.5" y="100" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="cXT-xw-Znb" firstAttribute="centerY" secondItem="Med-gk-tYA" secondAttribute="centerY" constant="-25" id="4SH-JV-2cu"/>
+                                            <constraint firstItem="cXT-xw-Znb" firstAttribute="leading" secondItem="Med-gk-tYA" secondAttribute="leading" constant="16" id="Agb-5c-Jky"/>
+                                            <constraint firstItem="QdW-zC-mFC" firstAttribute="top" secondItem="Med-gk-tYA" secondAttribute="top" constant="100" id="Mod-8d-QeW"/>
+                                            <constraint firstAttribute="trailing" secondItem="cXT-xw-Znb" secondAttribute="trailing" constant="16" id="WXO-OW-oQY"/>
+                                            <constraint firstItem="QdW-zC-mFC" firstAttribute="centerX" secondItem="Med-gk-tYA" secondAttribute="centerX" id="c1K-o0-SIt"/>
+                                            <constraint firstItem="cXT-xw-Znb" firstAttribute="centerX" secondItem="Med-gk-tYA" secondAttribute="centerX" id="fH4-u6-aIH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Med-gk-tYA" firstAttribute="leading" secondItem="nj0-uf-Vfn" secondAttribute="leading" id="6dR-0e-WG2"/>
+                                    <constraint firstItem="Med-gk-tYA" firstAttribute="top" secondItem="nj0-uf-Vfn" secondAttribute="top" id="j5y-JI-2H5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Med-gk-tYA" secondAttribute="bottom" id="xTG-U9-2w0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Med-gk-tYA" secondAttribute="trailing" id="yPl-yR-7vL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nj0-uf-Vfn" secondAttribute="trailing" id="K3w-KH-dIy"/>
+                            <constraint firstItem="nj0-uf-Vfn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qab-hB-ebX"/>
+                            <constraint firstAttribute="bottom" secondItem="nj0-uf-Vfn" secondAttribute="bottom" id="Uge-8n-jpQ"/>
+                            <constraint firstItem="nj0-uf-Vfn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fKd-mv-FgW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="gradientView" destination="Med-gk-tYA" id="eZP-Ls-R48"/>
+                        <outlet property="sequenceLabel" destination="QdW-zC-mFC" id="WFD-oZ-ylK"/>
+                        <outlet property="sliderView" destination="cXT-xw-Znb" id="YAE-pA-Tg3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

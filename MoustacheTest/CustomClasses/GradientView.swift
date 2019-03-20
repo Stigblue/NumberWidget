@@ -9,7 +9,7 @@
 import UIKit
 
 class GradientView: UIView {
-    let gradient = CAGradientLayer() // Will be hidden and unhidden accordingly
+    let gradient = CAGradientLayer()
 
     func setupGradient(startColor: UIColor, endColor: UIColor, startAlpha: CGFloat, endAlpha: CGFloat) {
         self.gradient.frame = self.bounds
